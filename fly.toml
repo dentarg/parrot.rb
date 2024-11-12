@@ -1,0 +1,14 @@
+app = "parrot"
+primary_region = "qro" # Querétaro, Mexico
+
+[env]
+  PORT = "8080"
+  RACK_ENV = "production"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
