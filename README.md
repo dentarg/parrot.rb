@@ -1,11 +1,13 @@
-# `curl parrot.live` in ruby
+# `curl 🦜.⚡️.gg`
+
+Locally:
 
 ```bash
 bundle
 bundle exec puma
 
 # in other window
-curl 127.0.0.1:9292
+curl localhost:9292
 ```
 
 ---
