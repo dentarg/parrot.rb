@@ -1,5 +1,6 @@
 #
 # docker build . -t parrot.rb --build-arg RUBY_VERSION="$(cat .ruby-version)"
+# docker run --rm -it --env PORT=8080 parrot.rb
 #
 
 ARG RUBY_VERSION
@@ -55,4 +56,4 @@ RUN chown -R $APPUSER:$APPUSER log tmp
 USER 1000:1000
 
 # Start the server by default, this can be overwritten at runtime
-CMD ["bundle", "exec", "puma", "-p", $PORT]
+CMD bundle exec puma --port $PORT
